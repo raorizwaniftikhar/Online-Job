@@ -1,0 +1,242 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Admin Login</title>
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css" media="all" />
+
+<script language="javascript">
+var xmlhttp
+xmlhttp=GetXmlHttpObject();  // create AJAX object
+//---------------------------------------------------------
+function GetXmlHttpObject()
+{
+if (window.XMLHttpRequest)
+  {
+  // code for IE7+, Firefox, Chrome, Opera, Safari etc.
+  return new XMLHttpRequest();
+  }
+if (window.ActiveXObject)
+  {
+  // code for IE6, IE5
+  return new ActiveXObject("Microsoft.XMLHTTP");
+  }
+return null;
+}
+//----------------------------------------------------
+var xmlhttp
+
+function stateChanged()
+{
+if (xmlhttp.readyState==4)
+  {
+  document.getElementById("resultshow").innerHTML=xmlhttp.responseText;
+  }
+}
+//--------------------------------------
+function showHint(){
+	email = document.getElementById("mail").value;
+	pw = document.getElementById("psw").value;
+	//alert (aa);
+
+if (mail.length==0)
+  {
+  document.getElementById("resultshow").innerHTML="";
+  return;
+  }
+
+
+//if (xmlhttp==null)
+//  {
+//  alert ("Your browser does not support XMLHTTP!");
+//  return;
+//  } 
+
+  url="verify.php?t1="+pw+"&t2="+email;   // jis page per jana hay, us 			
+ //alert (url);
+  									//ka address
+//url=url+"?t1="+str;
+
+//url=url+"&sid="+Math.random();
+
+xmlhttp.open("GET",url,true);  
+xmlhttp.onreadystatechange=stateChanged;
+//alert ("....");
+xmlhttp.send(null);
+}
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 10px}
+.style2 {font-size: 12px}
+.style3 {color: #3333FF}
+.style5 {font-size: 10px; color: #CC3333; }
+.style6 {color: #CC3333}
+.style8 {
+	color: #CC3333;
+	font-size: 12px;
+	font-weight: bold;
+}
+-->
+</style>
+<script language="JavaScript" src="gen_validatorv31.js" type="text/javascript"></script>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td  width="100%" height="40%">&nbsp;</td>
+</tr>
+<tr>
+<td align="right" valign="bottom" class="style2">Email: <a href="mailto:abc@yoursite.com" style="color:#333333; text-decoration:none;"> Mobile:+92-302-7477137<br /> 
+    mtoqeer14@gmail.com</a></td>
+</tr>
+<tr>
+ <td height="65" align="left" valign="top">
+              <img src="images/logo.jpg" alt="Company Logo" width="130" height="76" /> </td>
+  </tr>
+    <tr>
+<td  width="100%" height="40%">&nbsp;</td>
+</tr>
+<tr>
+<td width="100%" align="center" valign="top"><img src="images/header_bg.jpg" alt="Wasim here" width="964" height="170"  border="0" /></td>
+</tr>
+  <tr>
+    <td align="center" valign="top"><table width="741" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="168" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="26" align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="26" align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="26" align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="27" align="left" valign="middle"><a href="index.html" class="left_link" style="color:#41A9E8;">HOME</a></td>
+              </tr>
+              <tr>
+                <td height="27" align="left" valign="middle"><a href="viewuser.php" class="left_link">View JobSeekers </a><a href="adminlogin.html" class="left_link"></a></td>
+              </tr>
+              <tr>
+                <td height="27" align="left" valign="middle"><a href="viewcompany.php" class="left_link">View Employer</a><a href="login.html" class="left_link">s</a></td>
+              </tr>
+              <tr>
+                <td height="27" align="left" valign="middle"><a href="viewjob.php" class="left_link">View jobs </a></td>
+              </tr>
+              <tr>
+                <td height="27" align="left" valign="middle"><a href="contact.html" class="left_link">Contacts</a></td>
+              </tr>
+              
+            </table></td>
+            <td align="left" valign="top"><table width="573" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="26" align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center" valign="middle" bgcolor="#3997DD" style="font-size:10px; color:#FFF;">Administrator Login </td>
+                </tr>
+              <tr>
+                <td align="left" valign="top">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="text-align:justify;"><table cellspacing="0" cellpadding="0">
+                
+                  <tr>
+                    <td><blockquote>
+                        <blockquote>
+                          <p>&nbsp;</p>
+                         
+
+
+					<form id="form1" name="form1" method="post" action="verifyadmin.php">
+					<table>
+					 <tr >
+                                <td colspan="2" align="center"><p><span class="left_link">Please Login....... </span></p>
+                                    </td>
+                                 </tr>
+					<tr>
+					  <td><span class="left_link style1 style3"><span class="style6">Domain Name</span></span><span class="style5">:</span><span class="style1"></span></td>
+					  <td> <p>&nbsp;
+					  </p>
+					  <p>
+					    <input name="mail" type="text" id="mail" />
+					      </p>
+					  <p>&nbsp; </p></td>
+					</tr>
+					<tr>
+					<td class="style8">Password:</td>
+					<td> <input name="pw" type="password" id="psw" onBlur="showHint()"/>
+						
+					</td>
+					</tr>
+					<tr><td colspan="2" align="justify">	<br />
+						<span class="style1" id="resultshow">
+							</span></td></tr>
+							<tr><td colspan="2" align="right">
+			 <input type="submit" id="txt3" value="Sign in" /></td></tr>
+			 </table>
+
+
+
+</form>
+<script language="JavaScript" type="text/javascript">
+
+  var frmvalidator  = new Validator("form1");
+  
+  	frmvalidator.addValidation("pw","req","Please enter your password");
+	
+	 frmvalidator.addValidation("mail","maxlen=50");
+  frmvalidator.addValidation("mail","req","Please enter your Domain name");
+  frmvalidator.addValidation("mail","alpha_s");
+  </script>
+
+                          <p><br />
+                            </p>
+                          <blockquote>&nbsp;</blockquote>
+                          <p> </p>
+                        </blockquote>
+                    </blockquote></td>
+                  </tr>
+                  <tr> </tr>
+                </table>
+                  <br />
+                  <br /></td>
+              </tr>
+             
+              
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><table width="740" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="6" rowspan="2" align="left" valign="top">&nbsp;</td>
+            <td style="white-space:pre; font-size:12px; color:#601E29; color:#B46471;" height="23" colspan="2" align="center" valign="middle" bgcolor="#FFEEF2"><a href="index.html" class="footer_link">HOME</a> | <a href="about.html" class="footer_link">About us </a> | <a href="contact.html" class="footer_link">Contact us </a></td>
+            <td width="10" rowspan="2" align="left" valign="top">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="497" align="right" valign="top" class="footer_left_bg">Copyright &copy; Muhammad Toqeer 2014</td>
+        <td>&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
